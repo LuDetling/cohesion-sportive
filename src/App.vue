@@ -21,20 +21,35 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped lang="scss">
+.wrapper {
+  position: fixed;
+  width: 100%;
+}
+
 nav {
   display: flex;
-  gap: 1rem;
-  background-color: rgba($color: blue, $alpha: .8);
+  row-gap: 1rem;
   width: fit-content;
-  padding: 1rem;
   margin: .3rem auto 0;
   border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba($color: blue, $alpha: .8);
 
   a {
-    display: flex;
+    display: block;
     color: white;
     text-decoration: none;
+    padding: 1rem;
+    transition: .3s;
+
+    &:hover {
+      background-color: darkcyan;
+    }
   }
+}
+
+main {
+  margin-top: 5rem;
 }
 
 footer {
