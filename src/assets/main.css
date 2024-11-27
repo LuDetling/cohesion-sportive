@@ -1,9 +1,48 @@
 @import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   /* a changer */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Comfortaa', 'Work Sans', Arial, Helvetica, sans-serif;
+  color: #05152e;
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}
+
+section {
+  padding: 100px 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.btn {
+  display: block;
+  padding: .5rem 1.5rem;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.btn-border {
+  border: 1px solid white;
+  color: white;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.btn-border:hover {
+  border-color: #C17C45;
+  color: #C17C45;
 }

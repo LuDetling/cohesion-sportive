@@ -6,44 +6,46 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <a href="#">Top</a>
-        <a href="#description">Description</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#contact">Contact</a>
+        <a href="#who">Qui suis-je ?</a>
+        <a href="#services">Mes services & tarifs</a>
+        <a href="#"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"></a>
+        <a href="#confiance">Pourquoi me faire confiance ?</a>
+        <a href="#contact">Me contacter</a>
       </nav>
     </div>
   </header>
 
   <RouterView />
-  <footer>
+  <!-- <footer>
     credit
-  </footer>
+  </footer> -->
 </template>
 
 <style scoped lang="scss">
 .wrapper {
   position: fixed;
   width: 100%;
+  z-index: 1000;
+  background-color: rgba($color: white, $alpha: .9);
 }
 
 nav {
   display: flex;
   row-gap: 1rem;
-  width: fit-content;
-  margin: .3rem auto 0;
-  border-radius: 10px;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
   overflow: hidden;
-  background-color: rgba($color: blue, $alpha: .8);
-
+  max-width: 1400px;
+  margin: auto;
   a {
     display: block;
-    color: white;
     text-decoration: none;
     padding: 1rem;
     transition: .3s;
-
-    &:hover {
-      background-color: darkcyan;
+    color: black;
+    img {
+      width: 100px;
     }
   }
 }
