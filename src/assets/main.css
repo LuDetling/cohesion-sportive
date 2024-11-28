@@ -14,10 +14,11 @@
 * {
   scroll-behavior: smooth;
   scroll-padding: 100px;
+  box-sizing: border-box;
 }
 
 section {
-  padding: 100px 5rem;
+  padding: 100px 0;
 }
 
 h2 {

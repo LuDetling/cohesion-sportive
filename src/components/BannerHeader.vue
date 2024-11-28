@@ -39,27 +39,31 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 3rem;
         height: 100%;
         max-width: 1000px;
         margin: auto;
         position: relative;
         z-index: 1;
         padding: 3rem;
+        row-gap: 3rem;
+
         img {
-            max-width: 250px;
+            width: 30%;
             height: 100%;
-            margin-right: 1rem;
+            padding-right: 1rem;
+            min-width: 250px;
         }
 
         .right-content {
-            padding: 0 2rem;
+            padding-left: 2rem;
             border-left: 1px solid white;
+            width: 70%;
 
             h1 {
                 font-size: 55px;
                 color: white;
                 margin-bottom: 1rem;
+
                 span {
                     display: block;
                 }
