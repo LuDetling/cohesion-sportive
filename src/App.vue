@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Footer from './components/Footer.vue';
+
 </script>
 
 <template>
@@ -16,9 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <RouterView />
-  <!-- <footer>
-    credit
-  </footer> -->
+  <Footer />
 </template>
 
 <style scoped lang="scss">
@@ -39,12 +39,14 @@ nav {
   overflow: hidden;
   max-width: 1500px;
   margin: auto;
+
   a {
     display: block;
     text-decoration: none;
     padding: 1rem;
     transition: .3s;
     color: black;
+
     img {
       width: 100px;
     }

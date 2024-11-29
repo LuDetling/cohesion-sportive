@@ -1,41 +1,58 @@
 <template>
     <section>
+        <h2>
+            Pourquoi me faire confiance ?
+        </h2>
         <div class="content-why-me">
-            <h2>Pourquoi moi ?</h2>
-            <div class="why-me-cards">
-                <div class="card-me">
-                    <div class="content-cards">
-                        <h3>Ma passion, mon métier</h3>
-                        <p>Je suis passionnée par le sport et j’ai transformé cette passion en métier pour vous aider
-                            à
-                            adopter un mode de vie plus sain.</p>
-                        <p>Que ce soit pour sculpter votre silhouette, renforcer votre corps, ou améliorer votre
-                            mobilité, je propose des programmes personnalisés adaptés à vos
-                            besoins et objectifs, tout en vous guidant avec bienveillance.</p>
-                    </div>
-                </div>
-                <div class="card-me">
-                    <div class="content-cards">
-                        <h3>Devenir autonome</h3>
-                        <p>Mon rôle de coach est de vous enseigner les exercices de manière sécurisée pour vous rendre
-                            autonome et confiant dans votre pratique. </p>
-                        <p>Je suis disponible au quotidien pour ajuster votre
-                            programme, corriger vos mouvements, et répondre à toutes vos questions.</p>
-                        <p>
-                            N’hésitez pas à me contacter pour démarrer votre transformation !
-                        </p>
-                        <a href="#contact" class="btn">Me contacter</a>
-                    </div>
-                </div>
-                <div class="card-me">
-                    <div class="content-cards">
-                        <h3>Dépasser vos limites</h3>
-                        <p>Commencer ou maintenir une routine sportive peut être intimidant, surtout seul.</p>
-                        <p>Avec un suivi sur mesure, je vous aide à progresser en toute sécurité, avec des séances
-                            adaptées, complètes, et conçues pour éviter les blessures.</p>
-                        <p>Mon objectif est de rendre votre parcours sportif accessible et efficace.</p>
-                    </div>
-                </div>
+            <div>
+                <h3>Accompagnement personnalisé</h3>
+                <ul>
+                    <li>Nous définissons ensemble vos objectifs et mettons en place un programme sur mesure.
+                    </li>
+                    <li>Mes programmes sont adaptés à vos besoins et objectifs spécifiques.
+                    </li>
+                    <li>Je rends vos séances complètes et sécurisées.
+                    </li>
+                    <li>Je choisis des mouvements adaptés à votre niveau et à vos capacités physiques.
+                    </li>
+                    <li>Je m'adapte à votre rythme et au mieux à vos disponibilités.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Expertise, sécurité et adaptation</h3>
+                <ul>
+                    <li>Diplômée CQP Instructeur Fitness double mention + certification Pilates niveau 1 et Cupping
+                        Therapy
+                    </li>
+                    <li>Je vous enseigne des exercices sécurisés pour vous rendre autonome et confiant.</li>
+                    <li>Je corrige vos mouvements et ajuste votre programme selon vos besoins.﻿</li>
+                    <li>Je vous aide à progresser sans risque de blessures.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Motivation, bienveillance et engagement</h3>
+                <ul>
+                    <li>Je vous aide à rester motivé.e, même dans les moments de doute ou de fatigue.
+                    </li>
+                    <li>Je reste disponible pour répondre à vos questions et vous accompagner au quotidien.</li>
+                    <li>Je vous apporte un soutien pour atteindre vos objectifs étape par étape.
+                    </li>
+                    <li>Grâce à un suivi régulier, vous constatez des améliorations concrètes, renforçant votre
+                        engagement.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Gain de temps etd'efficacité</h3>
+                <ul>
+                    <li>J'optimise les séances, chaque minute est utilisée efficacement.</li>
+                    <li>Structure claire : Pas besoin de planifier ou de chercher des exercices, tout est préparé pour
+                        vous.</li>
+                    <li>Résultats concrets : Je vous guide vers une progression mesurable en un temps réduit.
+                    </li>
+                    <li>Nous fixons des objectifs réalistes.
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -43,59 +60,45 @@
 <script setup>
 
 </script>
-<style lang="scss">
-.content-why-me {
-    max-width: 1200px;
-    margin: auto;
-
+<style lang="scss" scoped>
+#whyme {
     h2 {
+        text-align: center;
+        color: #C17C45;
         margin-bottom: 4rem;
     }
 
-    .why-me-cards {
+    .content-why-me {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2rem;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1500px;
+        margin: auto;
+        row-gap: 3rem;
 
+        >div {
+            width: 25%;
+            padding: .5rem 2rem;
+            min-width: 340px;
 
-        .card-me {
-            width: 30%;
-            min-width: 300px;
-            background-color: #05152e;
-            border-radius: 16px;
-            
-            .content-cards {
-                padding: 1rem;
-                color: white;
-                border: 8px solid #2462C5;
-                border-radius: 16px;
-                min-height: 376px;
+            &:not(:first-child) {
+                border-left: 1px solid #cad3d0;
+            }
 
-                h3 {
+            h3 {
+                margin-bottom: 2rem;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            ul {
+                li {
                     margin-bottom: 1.5rem;
-                    text-align: center;
-                    font-weight: bold;
+                    line-height: 1.5;
+                    font-size: 15px;
                 }
-
-                p {
-                    margin-bottom: .5rem;
-                    line-height: 1.5rem;
-                }
-
-                a {
-                    margin: auto;
-                    margin-top: 2rem;
-                }
-            }
-
-            &:nth-child(2) {
-                margin-top: 12rem;
-            }
-
-            &:nth-child(3) {
-                margin-top: 5rem;
             }
         }
     }

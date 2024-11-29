@@ -55,3 +55,15 @@ h4 {
   border-color: #C17C45;
   color: #C17C45;
 }
+
+.btn-border-brown {
+  border: 1px solid #C17C45;
+  color: #C17C45;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.btn-border-brown:hover {
+  border-color: black;
+  color: black;
+}
