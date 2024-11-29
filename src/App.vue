@@ -26,7 +26,8 @@ import { RouterLink, RouterView } from 'vue-router'
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: rgba($color: white, $alpha: .9);
+  background-color: rgba($color: #f8f6f6, $alpha: .8);
+  backdrop-filter: blur(5px);
 }
 
 nav {
@@ -36,7 +37,7 @@ nav {
   width: 100%;
   align-items: center;
   overflow: hidden;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: auto;
   a {
     display: block;

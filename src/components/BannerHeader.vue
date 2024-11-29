@@ -19,7 +19,7 @@
 <style lang="scss" scoped>
 .banner-header {
     position: relative;
-    background: url("@/assets/images/header.webp");
+    background-image: url("@/assets/images/header.webp");
     background-attachment: fixed;
     padding: 400px 0 200px;
 
@@ -30,8 +30,6 @@
         position: absolute;
         top: 0;
         background-color: rgba($color: #000000, $alpha: .5);
-        // backdrop-filter: blur(7px);
-
         z-index: 0;
     }
 

@@ -18,8 +18,10 @@
                     domicile. Au fil des années, j’ai commencé à diversifier davantage ma façon de m’entraîner, en
                     travaillant mes mouvements dans une amplitude plus complète.</p>
             </div>
-            <h2>Qui suis-je ?</h2>
-            <img src="@/assets/images/moi.png" alt="Photo de moi">
+            <div class="right-content">
+                <h2>Qui suis-je ?</h2>
+                <img src="@/assets/images/moi.png" alt="Photo de moi">
+            </div>
         </div>
     </section>
 </template>
@@ -28,7 +30,7 @@
 </script>
 <style lang="scss" scoped>
 section {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
 
     .on-who-i-am {
@@ -36,34 +38,43 @@ section {
         justify-content: center;
         flex-wrap: wrap;
         row-gap: 3rem;
+
         .left-content {
             padding: .5rem 2rem .5rem 0;
             border-right: 1px solid #cad3d0;
-            width: 50%;
+            width: 60%;
+            min-width: 550px;
 
             p {
-                margin-bottom: 1.5rem;
                 text-align: right;
                 line-height: 1.5;
             }
+
+            p:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
         }
 
-        h2 {
-            color: #C17C45;
-            width: 20%;
-            padding: .5rem 0 .5rem 2rem;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
+        .right-content {
+            width: 40%;
+            h2 {
+                color: #C17C45;
+                padding: .5rem 0 .5rem 2rem;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
 
-        img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: top;
-            align-self: center;
+            img {
+                border-radius: 50%;
+                height: 300px;
+                object-fit: cover;
+                object-position: top;
+                align-self: center;
+                aspect-ratio: 1;
+                display: block;
+                margin-left: auto;
+            }
         }
     }
 }
