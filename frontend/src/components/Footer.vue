@@ -14,9 +14,10 @@
         <div>
             <h2>Me retrouver</h2>
             <div class="social">
-                <a href="#">F</a>
-                <a href="#">L</a>
-                <a href="#">I</a>
+                <a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
+                <a href="#"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a>
+                <a href="#"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+                <a href="#"><font-awesome-icon :icon="['fab', 'whatsapp']" /></a>
             </div>
         </div>
     </footer>
@@ -52,6 +53,13 @@ footer {
 
         a {
             display: block;
+            color: #C17C45;
+            text-decoration: none;
+            transition: .3s;
+
+            &:hover {
+                color: black;
+            }
         }
 
         .social {
@@ -59,9 +67,9 @@ footer {
             gap: 1rem;
 
             a {
-                color: #C17C45;
-                text-decoration: none;
                 padding: .3rem;
+                font-size: 1.1rem;
+
             }
         }
     }

@@ -25,7 +25,7 @@
                         Therapy
                     </li>
                     <li>Je vous enseigne des exercices sécurisés pour vous rendre autonome et confiant.</li>
-                    <li>Je corrige vos mouvements et ajuste votre programme selon vos besoins.﻿</li>
+                    <li>Je corrige vos mouvements et ajuste votre programme selon vos besoins.</li>
                     <li>Je vous aide à progresser sans risque de blessures.
                     </li>
                 </ul>
@@ -95,9 +95,17 @@
 
             ul {
                 li {
-                    margin-bottom: 1.5rem;
+                    &::before {
+                        content: '➞';
+                        margin-right: .5rem;
+                    }
+
                     line-height: 1.5;
                     font-size: 15px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1.5rem;
+                    }
                 }
             }
         }
