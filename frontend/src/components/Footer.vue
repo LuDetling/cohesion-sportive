@@ -38,6 +38,7 @@ footer {
     width: 100%;
     padding: 50px;
     margin: auto;
+    gap: 2rem;
 
     >div {
         padding: .5rem 0;
@@ -45,8 +46,12 @@ footer {
         line-height: 1.5;
 
         @media screen and (max-width: 900px) {
-            width: 50%;
+            width: calc(50% - 1rem);
             text-align: center;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 100%;
         }
 
         &:not(:first-child) {
@@ -79,7 +84,7 @@ footer {
         .social {
             display: flex;
             gap: 1rem;
-
+            justify-content: center;
             a {
                 padding: .3rem;
                 font-size: 1.1rem;

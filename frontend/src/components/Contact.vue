@@ -92,7 +92,6 @@ const sendEmail = async (values) => {
         console.log(error)
         errorForm.value = "Il y a eu une erreur"
     }
-
 }
 
 
@@ -112,6 +111,13 @@ const sendEmail = async (values) => {
         width: fit-content;
         background-color: #f8f6f6;
         padding: 3rem;
+        border-radius: 20px;
+
+        @media screen and (max-width: 900px) {
+            margin: auto;
+            padding: 2rem 1rem;
+            width: 100%;
+        }
 
         h2 {
             color: #C17C45;
@@ -121,11 +127,15 @@ const sendEmail = async (values) => {
         form {
             >div {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 2rem;
                 margin-bottom: 2rem;
 
                 div {
                     min-width: 350px;
+                    @media screen and (max-width: 900px) {
+                        min-width: 100%;
+                    }
                 }
 
                 label {

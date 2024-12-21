@@ -303,6 +303,9 @@ section {
             background-attachment: fixed;
             background-repeat: no-repeat;
             position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+
 
             @media screen and (max-width: 600px) {
                 padding: 200px 25px;
