@@ -1,7 +1,7 @@
 <template>
     <div class="banner-header">
         <div class="on-img">
-            <img src="@/assets/images/logo-grey.webp" alt="Logo cohésion sportive">
+            <img src="@/assets/images/logo-grey.webp" alt="Logo cohésion sportive" class="logo-header">
             <div class="right-content">
                 <h1>Chloé Douguedroit</h1>
                 <div class="text">Coach sportive diplômée</div>
@@ -11,6 +11,9 @@
                 <a href="#contact" class="btn btn-border">Me contacter</a>
             </div>
         </div>
+        <a href="#description" class="scroll-down">
+            <img src="../assets/images/background/scroll-down.gif" alt="scroll down">
+        </a>
     </div>
 </template>
 <script setup>
@@ -21,7 +24,17 @@
     position: relative;
     background-image: url("@/assets/images/header.webp");
     background-attachment: fixed;
-    padding: 400px 0 200px;
+    background-position: center;
+    padding: 300px 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    @media screen and (max-width: 929px) {
+        padding: 150px 0 100px;
+        
+    }
 
     &::before {
         content: '';
@@ -33,10 +46,20 @@
         z-index: 0;
     }
 
+    .scroll-down {
+        position: absolute;
+        bottom: 2rem;
+
+        img {
+            width: 50px;
+        }
+    }
+
     .on-img {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         height: 100%;
         max-width: 1000px;
         margin: auto;
@@ -45,22 +68,33 @@
         padding: 3rem;
         row-gap: 3rem;
 
-        img {
+        .logo-header {
             width: 30%;
-            height: 100%;
             padding-right: 1rem;
             min-width: 250px;
         }
+
 
         .right-content {
             padding-left: 2rem;
             border-left: 1px solid white;
             width: 70%;
 
+            @media screen and (max-width: 900px) {
+                border-left: none;
+                padding-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+
             h1 {
                 font-size: 55px;
                 color: white;
                 margin-bottom: 1rem;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 40px;
+                }
 
                 span {
                     display: block;
@@ -80,6 +114,11 @@
 
             .btn {
                 margin: 1rem 0 .5rem;
+
+                @media screen and (max-width: 900px) {
+                    display: block;
+                    margin: 2rem auto;
+                }
             }
         }
     }

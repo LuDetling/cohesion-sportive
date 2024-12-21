@@ -75,15 +75,35 @@
         width: 100%;
         max-width: 1500px;
         margin: auto;
-        row-gap: 3rem;
+        row-gap: 5rem;
 
         >div {
             width: 25%;
             padding: .5rem 2rem;
             min-width: 340px;
 
+            @media screen and (max-width: 1460px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+                padding: .5rem 1rem;
+            }
+
             &:not(:first-child) {
                 border-left: 1px solid #cad3d0;
+
+                @media screen and (max-width: 800px) {
+                    border: none;
+                }
+            }
+
+            @media screen and (max-width: 1460px) {
+                &:nth-child(3) {
+                    border: none;
+                }
+
             }
 
             h3 {
@@ -95,13 +115,14 @@
 
             ul {
                 li {
-                    &::before {
-                        content: '➞';
-                        margin-right: .5rem;
-                    }
-
+                    padding-left: .5rem;
                     line-height: 1.5;
                     font-size: 15px;
+                    list-style: disc;
+
+                    &::marker {
+                        content: "➞";
+                    }
 
                     &:not(:last-child) {
                         margin-bottom: 1.5rem;

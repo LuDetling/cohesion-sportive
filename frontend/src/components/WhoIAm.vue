@@ -43,11 +43,21 @@ section {
             padding: .5rem 2rem .5rem 0;
             border-right: 1px solid #cad3d0;
             width: 60%;
-            min-width: 550px;
+
+            @media screen and (max-width: 900px) {
+                order: 1;
+                width: 100%;
+                border: none;
+                padding: 0;
+                min-width: 0;
+            }
 
             p {
                 text-align: right;
                 line-height: 1.5;
+                @media screen and (max-width: 900px) {
+                    text-align: left;
+                }
             }
 
             p:not(:last-child) {
@@ -57,12 +67,23 @@ section {
 
         .right-content {
             width: 40%;
+
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                order: 0;
+            }
+
             h2 {
                 color: #C17C45;
                 padding: .5rem 0 .5rem 2rem;
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 line-height: 2rem;
+                @media screen and (max-width: 900px) {
+                    padding: 0;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
             }
 
             img {
@@ -74,6 +95,10 @@ section {
                 aspect-ratio: 1;
                 display: block;
                 margin-left: auto;
+
+                @media screen and (max-width: 900px) {
+                    margin: auto;
+                }
             }
         }
     }

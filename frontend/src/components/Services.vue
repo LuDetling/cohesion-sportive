@@ -3,141 +3,252 @@
         <h2>Découvrez mes services & tarifs</h2>
         <div class="flex-content">
             <div class="left-content">
-                <div class="content">
-                    <h3>Coaching à domicile</h3>
-                    <a href="#reserver" class="btn btn-border">Réserver</a>
-                    <div class="arrow">↓</div>
-                    <div class="accordion">
-                        <button @click="(isExpandedLeftTop = !isExpandedLeftTop) && (isExpandedLeftBottom = false)"
-                            :class="{ collapse: isExpandedLeftTop }">
-                            <h4>Votre accompagnement en détail</h4>
-                            <div class="content-plus">
-                                <div class="plus"></div>
-                                <div class="moins"></div>
-                            </div>
-                        </button>
-                        <Collapse :when="isExpandedLeftTop">
-                            <ul>
-                                <li>Appel avant la première séance : Un échange pour cerner vos objectifs, vos
-                                    besoins
-                                    spécifiques, et définir ensemble une séance qui vous convient.</li>
-                                <li>Encadrement en présentiel à chaque séance : Bénéficiez de corrections précises,
-                                    d'ajustements de mouvements et de conseils pour améliorer chaque exercice en
-                                    toute
-                                    sécurité.</li>
-                                <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement, la
-                                    récupération, la mobilité...
-                                </li>
-                                <li>Appel de fin de programme (ou directement après la dernière séance) : Évaluation
-                                    de
-                                    vos progrès et discussion sur les prochaines étapes pour prolonger vos succès.
-                                </li>
-                            </ul>
-                        </Collapse>
+                <div class="left-content-background">
+                    <div class="content">
+                        <h3>Coaching à domicile</h3>
+                        <a href="#reserver" class="btn btn-border">Réserver</a>
+                        <div class="arrow">↓</div>
+                        <div class="accordion">
+                            <button @click="(isExpandedLeftTop = !isExpandedLeftTop) && (isExpandedLeftBottom = false)"
+                                :class="{ collapse: isExpandedLeftTop }">
+                                <h4>Votre accompagnement en détail</h4>
+                                <div class="content-plus">
+                                    <div class="plus"></div>
+                                    <div class="moins"></div>
+                                </div>
+                            </button>
+                            <Collapse :when="isExpandedLeftTop">
+                                <ul>
+                                    <li>Appel avant la première séance : Un échange pour cerner vos objectifs, vos
+                                        besoins
+                                        spécifiques, et définir ensemble une séance qui vous convient.</li>
+                                    <li>Encadrement en présentiel à chaque séance : Bénéficiez de corrections précises,
+                                        d'ajustements de mouvements et de conseils pour améliorer chaque exercice en
+                                        toute
+                                        sécurité.</li>
+                                    <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement, la
+                                        récupération, la mobilité...
+                                    </li>
+                                    <li>Appel de fin de programme (ou directement après la dernière séance) : Évaluation
+                                        de
+                                        vos progrès et discussion sur les prochaines étapes pour prolonger vos succès.
+                                    </li>
+                                </ul>
+                            </Collapse>
+                        </div>
+                        <div class="accordion">
+                            <button
+                                @click="(isExpandedLeftBottom = !isExpandedLeftBottom) && (isExpandedLeftTop = false)"
+                                :class="{ collapse: isExpandedLeftBottom }">
+                                <h4>Pourquoi choisir cette préstation ?</h4>
+                                <div class="content-plus">
+                                    <div class="plus"></div>
+                                    <div class="moins"></div>
+                                </div>
+                            </button>
+                            <Collapse :when="isExpandedLeftBottom">
+                                <ul>
+                                    <li>Le premier avantage du coaching à domicile, c’est ma présence pour vous soutenir
+                                        à
+                                        chaque séance. Vous bénéficiez d’une motivation en temps réel, vous permettant
+                                        d’être constant dans votre routine.</li>
+                                    <li>En vous accompagnant, je m’assure de la bonne exécution de vos mouvements sur
+                                        les
+                                        différents exercices. Je m’adapte selon votre forme du jour.</li>
+                                    <li>Avec son travail et sa vie de famille, il peut être difficile de libérer du
+                                        temps
+                                        pour s’entraîner. Profitez d'un coaching sur-mesure et sans déplacements,
+                                        intégrable
+                                        facilement à votre quotidien.</li>
+                                    <li>De plus, si vous ne sentez pas à l’aise dans une salle de sport, s’entraîner à
+                                        domicile est tout à fait adapté. Loin du regard des autres, vous restez
+                                        concentré
+                                        sur votre séance et vos sensations. La progression est assurée.</li>
+                                    <li>La possibilité d’être coaché avec un membre de sa famille, un ami, met l’accent
+                                        sur
+                                        la convivialité et la cohésion de groupe. Cela permet de renforcer les liens
+                                        tout en
+                                        restant actif.
+                                    </li>
+                                </ul>
+                            </Collapse>
+                        </div>
                     </div>
-                    <div class="accordion">
-                        <button @click="(isExpandedLeftBottom = !isExpandedLeftBottom) && (isExpandedLeftTop = false)"
-                            :class="{ collapse: isExpandedLeftBottom }">
-                            <h4>Pourquoi choisir cette préstation ?</h4>
-                            <div class="content-plus">
-                                <div class="plus"></div>
-                                <div class="moins"></div>
-                            </div>
-                        </button>
-                        <Collapse :when="isExpandedLeftBottom">
-                            <ul>
-                                <li>Le premier avantage du coaching à domicile, c’est ma présence pour vous soutenir
-                                    à
-                                    chaque séance. Vous bénéficiez d’une motivation en temps réel, vous permettant
-                                    d’être constant dans votre routine.</li>
-                                <li>En vous accompagnant, je m’assure de la bonne exécution de vos mouvements sur
-                                    les
-                                    différents exercices. Je m’adapte selon votre forme du jour.</li>
-                                <li>Avec son travail et sa vie de famille, il peut être difficile de libérer du
-                                    temps
-                                    pour s’entraîner. Profitez d'un coaching sur-mesure et sans déplacements,
-                                    intégrable
-                                    facilement à votre quotidien.</li>
-                                <li>De plus, si vous ne sentez pas à l’aise dans une salle de sport, s’entraîner à
-                                    domicile est tout à fait adapté. Loin du regard des autres, vous restez
-                                    concentré
-                                    sur votre séance et vos sensations. La progression est assurée.</li>
-                                <li>La possibilité d’être coaché avec un membre de sa famille, un ami, met l’accent
-                                    sur
-                                    la convivialité et la cohésion de groupe. Cela permet de renforcer les liens
-                                    tout en
-                                    restant actif.
-                                </li>
-                            </ul>
-                        </Collapse>
+                </div>
+                <div class="tarifs">
+                    <div class="left-tarifs-content">
+                        <h3>Solo</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Packs</th>
+                                    <th>Tarifs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Séance Individuelle</td>
+                                    <td>40 euros HT</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack 5 séances</td>
+                                    <td>180 euros HT</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack 10 séances</td>
+                                    <td>340 euros HT</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack 20 séances</td>
+                                    <td>600 euros HT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text">
+                            <p>Programme + 15 euros HT</p>
+                            <p>Facilités de paiement (paiement en 3 fois)</p>
+                            <p>Chaque séance sera limitée à 1 heure maximum.</p>
+                        </div>
+                        <a href="#contact" class="btn btn-border-brown">Demander un devis</a>
+                    </div>
+                    <div class="right-tarifs-content">
+                        <h3>Duo</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Packs</th>
+                                    <th>Tarifs/pers.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Séance Individuelle</td>
+                                    <td>25 euros HT</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack 5 séances</td>
+                                    <td>112,5 euros HT</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack 10 séances</td>
+                                    <td>212,5 euros HT</td>
+                                </tr>
+                                <tr>
+                                    <td>Pack 20 séances</td>
+                                    <td>375 euros HT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text">
+                            <p>Programme + 15 euros HT</p>
+                            <p>Facilités de paiement (paiement en 3 fois)</p>
+                            <p>Chaque séance sera limitée à 1 heure maximum.</p>
+                        </div>
+                        <a href="#contact" class="btn btn-border-brown">Demander un devis</a>
                     </div>
                 </div>
             </div>
             <div class="right-content">
-                <div class="content">
-                    <h3>Coaching à domicile</h3>
-                    <a href="#reserver" class="btn btn-border">Réserver</a>
-                    <div class="arrow">↓</div>
-                    <div class="accordion">
-                        <button @click="(isExpandedRightTop = !isExpandedRightTop) && (isExpandedRightBottom = false)"
-                            :class="{ collapse: isExpandedRightTop }">
-                            <h4>Votre accompagnement en détail</h4>
-                            <div class="content-plus">
-                                <div class="plus"></div>
-                                <div class="moins"></div>
-                            </div>
-                        </button>
-                        <Collapse :when="isExpandedRightTop">
-                            <ul>
-                                <li>Appel de début de programme : Un premier échange pour comprendre vos objectifs,
-                                    votre mode de vie et définir le plan qui vous convient.</li>
-                                <li>Suivi régulier : Des suivis hebdomadaires ou bimensuels pour ajuster le
-                                    programme en
-                                    fonction de vos progrès, corriger vos exécutions et répondre à toutes vos
-                                    questions.
-                                </li>
-                                <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement, la
-                                    récupération, la mobilité...
-                                </li>
-                                <li>Appel de fin de programme : Pour faire le point sur les progrès réalisés et
-                                    envisager la suite de votre parcours sportif.
-                                </li>
-                            </ul>
-                        </Collapse>
+
+                <div class="right-content-background">
+                    <div class="content">
+                        <h3>Coaching en ligne</h3>
+                        <a href="#reserver" class="btn btn-border">Réserver</a>
+                        <div class="arrow">↓</div>
+                        <div class="accordion">
+                            <button
+                                @click="(isExpandedRightTop = !isExpandedRightTop) && (isExpandedRightBottom = false)"
+                                :class="{ collapse: isExpandedRightTop }">
+                                <h4>Votre accompagnement en détail</h4>
+                                <div class="content-plus">
+                                    <div class="plus"></div>
+                                    <div class="moins"></div>
+                                </div>
+                            </button>
+                            <Collapse :when="isExpandedRightTop">
+                                <ul>
+                                    <li>Appel de début de programme : Un premier échange pour comprendre vos objectifs,
+                                        votre mode de vie et définir le plan qui vous convient.</li>
+                                    <li>Suivi régulier : Des suivis hebdomadaires ou bimensuels pour ajuster le
+                                        programme en
+                                        fonction de vos progrès, corriger vos exécutions et répondre à toutes vos
+                                        questions.
+                                    </li>
+                                    <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement, la
+                                        récupération, la mobilité...
+                                    </li>
+                                    <li>Appel de fin de programme : Pour faire le point sur les progrès réalisés et
+                                        envisager la suite de votre parcours sportif.
+                                    </li>
+                                </ul>
+                            </Collapse>
+                        </div>
+                        <div class="accordion">
+                            <button
+                                @click="(isExpandedRightBottom = !isExpandedRightBottom) && (isExpandedRightTop = false)"
+                                :class="{ collapse: isExpandedRightBottom }">
+                                <h4>Pourquoi choisir cette préstation ?</h4>
+                                <div class="content-plus">
+                                    <div class="plus"></div>
+                                    <div class="moins"></div>
+                                </div>
+                            </button>
+                            <Collapse :when="isExpandedRightBottom">
+                                <ul>
+                                    <li>Le coaching en ligne vous permet d’organiser vos séances en fonction de votre
+                                        rythme
+                                        et de votre emploi du temps.</li>
+                                    <li>De plus, selon vos préférences, vous choisissez le lieu d’entraînement qui vous
+                                        convient (salle de sport, en extérieur ou à domicile). Un programme personnalisé
+                                        est
+                                        conçu pour vous, selon vos besoins et vos objectifs.</li>
+                                    <li>La communication via les outils numériques permet un suivi régulier de vos
+                                        progrès.
+                                    </li>
+                                    <li>Je me rends disponible pour répondre à vos questionnements, corriger vos
+                                        postures,
+                                        vos exécutions.
+                                    </li>
+                                    <li>Grâce à mes messages d’encouragements, vous gardez la motivation. Votre coach
+                                        est là
+                                        pour encourager, remotiver en cas de baisse d'énergie, et célébrer chaque étape
+                                        franchie vers votre objectif.
+                                    </li>
+                                </ul>
+                            </Collapse>
+                        </div>
                     </div>
-                    <div class="accordion">
-                        <button
-                            @click="(isExpandedRightBottom = !isExpandedRightBottom) && (isExpandedRightTop = false)"
-                            :class="{ collapse: isExpandedRightBottom }">
-                            <h4>Pourquoi choisir cette préstation ?</h4>
-                            <div class="content-plus">
-                                <div class="plus"></div>
-                                <div class="moins"></div>
-                            </div>
-                        </button>
-                        <Collapse :when="isExpandedRightBottom">
-                            <ul>
-                                <li>Le coaching en ligne vous permet d’organiser vos séances en fonction de votre
-                                    rythme
-                                    et de votre emploi du temps.</li>
-                                <li>De plus, selon vos préférences, vous choisissez le lieu d’entraînement qui vous
-                                    convient (salle de sport, en extérieur ou à domicile). Un programme personnalisé
-                                    est
-                                    conçu pour vous, selon vos besoins et vos objectifs.</li>
-                                <li>La communication via les outils numériques permet un suivi régulier de vos
-                                    progrès.
-                                </li>
-                                <li>Je me rends disponible pour répondre à vos questionnements, corriger vos
-                                    postures,
-                                    vos exécutions.
-                                </li>
-                                <li>Grâce à mes messages d’encouragements, vous gardez la motivation. Votre coach
-                                    est là
-                                    pour encourager, remotiver en cas de baisse d'énergie, et célébrer chaque étape
-                                    franchie vers votre objectif.
-                                </li>
-                            </ul>
-                        </Collapse>
+                </div>
+                <div class="tarifs">
+                    <div>
+                        <h3>Abonnement</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Engagement</th>
+                                    <th>Tarifs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3 mois</td>
+                                    <td>345 euros HT (Soit 115 euros/mois)</td>
+                                </tr>
+                                <tr>
+                                    <td>6 mois</td>
+                                    <td>660 euros HT (Soit 110 euros/mois)</td>
+                                </tr>
+                                <tr>
+                                    <td>1 an</td>
+                                    <td>1200 euros HT (Soit 100 euros/mois)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text">
+                            <p>Programme inclut.</p>
+                            <p>Facilités de paiement (paiement en 3, 6 ou 12 fois).</p>
+                        </div>
+                        <a href="#contact" class="btn btn-border-brown">Demander un devis</a>
                     </div>
                 </div>
             </div>
@@ -158,7 +269,7 @@ section {
     max-width: 1500px;
     width: 100%;
     margin: auto;
-    padding-bottom: 0;
+
     h2 {
         color: #C17C45;
         text-align: center;
@@ -173,21 +284,29 @@ section {
         gap: 4rem;
         flex-wrap: wrap;
 
-        .left-content,
-        .right-content {
+        .right-content,
+        .left-content {
             width: calc(50% - 2rem);
-            min-width: 500px;
+
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+            }
+        }
+
+        .left-content-background,
+        .right-content-background {
             margin-right: auto;
             margin-left: auto;
-
-
-
             padding: 200px 50px;
             position: relative;
             margin-bottom: 3rem;
             background-attachment: fixed;
             background-repeat: no-repeat;
             position: relative;
+
+            @media screen and (max-width: 600px) {
+                padding: 200px 25px;
+            }
 
             &::after {
                 content: '';
@@ -229,6 +348,7 @@ section {
                         background-color: transparent;
                         display: flex;
                         align-items: center;
+                        column-gap: 1rem;
                         justify-content: space-between;
                         width: 100%;
                         padding: 1rem;
@@ -241,6 +361,7 @@ section {
 
                         .content-plus {
                             position: relative;
+                            width: 14px;
 
                             .plus,
                             .moins {
@@ -248,7 +369,7 @@ section {
                                 height: 1px;
                                 background-color: white;
                                 position: absolute;
-                                left: -14px;
+                                left: 0;
                                 transition: .5s;
                             }
 
@@ -275,12 +396,15 @@ section {
 
                         ul {
                             padding: 0 40px;
-                            list-style-type: circle;
+                            list-style: disc;
+
+                            @media screen and (max-width: 600px) {
+                                padding: 0 20px;
+                            }
 
                             li {
                                 margin-bottom: 1.5rem;
                                 line-height: 1.4;
-                                list-style-position: inside;
                                 font-size: 15px;
                             }
                         }
@@ -291,18 +415,95 @@ section {
 
         }
 
-        .left-content {
+        .left-content-background {
             background-image: url('@/assets/images/left-content.jpg');
             color: white;
 
 
         }
 
-        .right-content {
+        .right-content-background {
             background-image: url('@/assets/images/right-content.jpg');
             color: white;
         }
     }
+}
 
+.left-tarifs,
+.right-tarifs {
+    width: calc(50% - 2rem);
+
+    .left-tarifs-content,
+    .right-tarifs-content {
+        width: calc(50% - 1rem);
+        min-width: 310px;
+    }
+}
+
+.right-tarifs {
+    .tarifs {
+        height: 100%;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+
+            .text {
+                margin-top: auto;
+
+            }
+        }
+    }
+}
+
+.tarifs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+h3 {
+    margin: 0 auto 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid #cad3d0;
+    text-align: left;
+    padding: 10px;
+}
+
+thead {
+    td {
+        font-weight: 700;
+    }
+}
+
+tbody {
+    td {
+        background-color: #ffffff;
+        color: #C17C45;
+        font-size: 15px;
+    }
+}
+
+.text {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.btn {
+    margin: 0 auto;
 }
 </style>
