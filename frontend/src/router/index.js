@@ -8,6 +8,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        title: 'Cohésion Sportive | Coach Personnel',
+        description: 'Coaching sportif personnalisé au Mans. Programmes sur mesure, suivi personnalisé et résultats garantis.',
+        keywords: 'coach sportif, personal trainer, fitness, remise en forme'
+      },
     },
     {
       // path: '/about',
@@ -19,5 +24,34 @@ const router = createRouter({
     },
   ],
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  
+  // Mise à jour des meta tags
+  updateMetaTags(to.meta)
+  
+  next()
+})
+
+function updateMetaTags(meta) {
+  // Description
+  let descriptionTag = document.querySelector('meta[name="description"]')
+  if (!descriptionTag) {
+    descriptionTag = document.createElement('meta')
+    descriptionTag.setAttribute('name', 'description')
+    document.head.appendChild(descriptionTag)
+  }
+  descriptionTag.setAttribute('content', meta.description)
+
+  // Keywords
+  let keywordsTag = document.querySelector('meta[name="keywords"]')
+  if (!keywordsTag) {
+    keywordsTag = document.createElement('meta')
+    keywordsTag.setAttribute('name', 'keywords')
+    document.head.appendChild(keywordsTag)
+  }
+  keywordsTag.setAttribute('content', meta.keywords)
+}
 
 export default router

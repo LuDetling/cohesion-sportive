@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Footer from './components/Footer.vue';
+import { ref } from 'vue';
 
 const toggleMenu = () => {
   const burger = document.querySelector('.burger-menu');
@@ -9,6 +10,37 @@ const toggleMenu = () => {
   navMobile.classList.toggle('active');
 }
 
+const sections = ref([{
+  id: 'who',
+  title: 'A propos'
+}, {
+  id: 'whyme',
+  title: 'Pourquoi moi ?'
+}, {
+  id: 'services',
+  title: 'Services & tarifs'
+}, {
+  id: 'contact',
+  title: 'Contact'
+}])
+const activeSection = ref('')
+
+const checkActiveSection = () => {
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollPosition > sectionTop - windowHeight / 2 && scrollPosition < sectionTop + sectionHeight - windowHeight / 2) {
+      activeSection.value = section.id;
+      console.log(activeSection.value);
+
+    }
+  });
+}
+
+window.addEventListener('scroll', checkActiveSection);
 </script>
 
 <template>
@@ -16,22 +48,22 @@ const toggleMenu = () => {
     <div class="wrapper">
       <nav class="nav">
         <div class="nav-content">
-          <a href="#who">
+          <a href="#who" :class="{ 'active': activeSection === 'who' }">
             <p>A propos</p>
             <p>A propos</p>
           </a>
-          <a href="#whyme">
+          <a href="#whyme" :class="{ 'active': activeSection === 'whyme' }">
             <p>Pourquoi moi ?</p>
             <p>Pourquoi moi ?</p>
           </a>
         </div>
         <a href="#" class="logo-menu"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"></a>
         <div class="nav-content">
-          <a href="#services">
+          <a href="#services" :class="{ 'active': activeSection === 'services' }">
             <p>Services & tarifs</p>
             <p>Services & tarifs</p>
           </a>
-          <a href="#contact">
+          <a href="#contact" :class="{ 'active': activeSection === 'contact' }">
             <p>Contact</p>
             <p>Contact</p>
           </a>
@@ -46,10 +78,10 @@ const toggleMenu = () => {
       </div>
       <nav class="nav-mobile">
         <div class="mobile">
-          <a href="#who">A propos</a>
-          <a href="#whyme">Pourquoi moi ?</a>
-          <a href="#services">Services & tarifs</a>
-          <a href="#contact">Contact</a>
+          <a href="#who" :class="{ 'active': activeSection === 'who' }">A propos</a>
+          <a href="#whyme" :class="{ 'active': activeSection === 'whyme' }">Pourquoi moi ?</a>
+          <a href="#services" :class="{ 'active': activeSection === 'services' }">Services & tarifs</a>
+          <a href="#contact" :class="{ 'active': activeSection === 'contact' }">Contact</a>
         </div>
       </nav>
     </div>
@@ -114,8 +146,12 @@ const toggleMenu = () => {
       color: black;
       text-decoration: none;
 
+      &.active {
+        color: #C17C45;
+      }
+
       &:hover {
-        text-decoration: underline;
+        color: #C17C45;
       }
     }
   }
@@ -146,7 +182,7 @@ const toggleMenu = () => {
       height: 3px;
       background-color: #C17C45;
       transition: .3s;
-      border-radius: 10px;
+      border-radius: 8px;
       left: 0;
     }
 
@@ -200,6 +236,10 @@ img {
     color: black;
     overflow: hidden;
     position: relative;
+
+    &.active {
+      color: #C17C45;
+    }
 
     &:not(.logo-menu) {
 

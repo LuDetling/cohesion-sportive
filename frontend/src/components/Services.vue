@@ -303,7 +303,7 @@ section {
             background-attachment: fixed;
             background-repeat: no-repeat;
             position: relative;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
 
 
