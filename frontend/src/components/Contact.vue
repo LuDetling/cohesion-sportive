@@ -47,10 +47,6 @@ import { Field, Form, ErrorMessage } from 'vee-validate';
 import { ref } from 'vue';
 import * as yup from 'yup';
 
-// const siteKey = "6Le4apoqAAAAACdoP3jYQVz15EqVVkLWWdJ1Cjku"
-// const script = document.createElement("script");
-// script.src = "https://www.google.com/recaptcha/api.js?render=" + siteKey;
-// document.body.appendChild(script);
 let url = "https://127.0.0.1:8000/api/contact"
 
 const valideForm = ref('');
@@ -68,17 +64,6 @@ const contactSchema = yup.object({
 
 const sendEmail = async (values) => {
 
-    // const token = await new Promise((resolve) => {
-    //     grecaptcha.ready(function () {
-    //         grecaptcha.execute(siteKey, {
-    //             action: 'homepage'
-    //         })
-    //             .then(resolve);
-    //     })
-    // });
-    // values.captcha = token
-    // console.log(values);
-
     try {
         const response = await fetch(url, {
             method: "POST",
@@ -93,7 +78,6 @@ const sendEmail = async (values) => {
         errorForm.value = "Il y a eu une erreur"
     }
 }
-
 
 </script>
 <style lang="scss" scoped>
@@ -111,7 +95,7 @@ const sendEmail = async (values) => {
         width: fit-content;
         background-color: #f8f6f6;
         padding: 3rem;
-        border-radius: 20px;
+        border-radius: 16px;
 
         @media screen and (max-width: 900px) {
             margin: auto;
