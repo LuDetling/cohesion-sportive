@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
+use App\Repository\ContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3Validator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,7 +19,7 @@ class ContactController extends AbstractController
 {
 
     #[Route('/api/contact', name: 'api_contact', methods: ['POST'])]
-    public function contact(Request $request, MailerInterface $mailer, EntityManagerInterface $em, Recaptcha3Validator $recaptcha3Validator): JsonResponse
+    public function newContact(Request $request, MailerInterface $mailer, EntityManagerInterface $em): JsonResponse
     {
 
         $data = json_decode($request->getContent(), true);

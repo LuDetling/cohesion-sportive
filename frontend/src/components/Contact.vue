@@ -47,7 +47,7 @@ import { Field, Form, ErrorMessage } from 'vee-validate';
 import { ref } from 'vue';
 import * as yup from 'yup';
 
-let url = "https://127.0.0.1:8000/api/contact"
+let url = "http://localhost:8000/api/contact"
 
 const valideForm = ref('');
 const errorForm = ref('');
@@ -63,19 +63,15 @@ const contactSchema = yup.object({
 })
 
 const sendEmail = async (values) => {
-    console.log(JSON.stringify(values));
-    
     try {
         const response = await fetch(url, {
             method: "POST",
             body: JSON.stringify(values)
         })
         const result = await response.json();
-        console.log(result);
         valideForm.value = "Votre message a bien été envoyé"
         message.value = ""
     } catch (error) {
-        console.log(error)
         errorForm.value = "Il y a eu une erreur"
     }
 }
@@ -86,6 +82,7 @@ const sendEmail = async (values) => {
     background-image: url("@/assets/images/contactbis.jpg");
     background-attachment: fixed;
     background-size: cover;
+
     .container {
         max-width: 1400px;
         margin: auto;
