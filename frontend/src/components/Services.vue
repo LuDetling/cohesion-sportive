@@ -302,6 +302,7 @@ section {
             margin-bottom: 3rem;
             background-attachment: fixed;
             background-repeat: no-repeat;
+            background-size: cover;
             position: relative;
             border-radius: 16px;
             overflow: hidden;
@@ -426,8 +427,9 @@ section {
         }
 
         .right-content-background {
-            background-image: url('@/assets/images/right-content.jpg');
+            background-image: url('@/assets/images/groupe.jpg');
             color: white;
+            background-position: right;
         }
     }
 }
@@ -475,6 +477,7 @@ h3 {
 
 table {
     width: 100%;
+    border-radius: 1rem;
 }
 
 table,

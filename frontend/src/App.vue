@@ -34,8 +34,6 @@ const checkActiveSection = () => {
     const sectionHeight = section.clientHeight;
     if (scrollPosition > sectionTop - windowHeight / 2 && scrollPosition < sectionTop + sectionHeight - windowHeight / 2) {
       activeSection.value = section.id;
-      console.log(activeSection.value);
-
     }
   });
 }

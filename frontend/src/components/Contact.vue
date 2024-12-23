@@ -63,7 +63,8 @@ const contactSchema = yup.object({
 })
 
 const sendEmail = async (values) => {
-
+    console.log(JSON.stringify(values));
+    
     try {
         const response = await fetch(url, {
             method: "POST",
@@ -82,9 +83,9 @@ const sendEmail = async (values) => {
 </script>
 <style lang="scss" scoped>
 #contact {
-    background-image: url("@/assets/images/contact.jpg");
+    background-image: url("@/assets/images/contactbis.jpg");
     background-attachment: fixed;
-
+    background-size: cover;
     .container {
         max-width: 1400px;
         margin: auto;
@@ -117,6 +118,7 @@ const sendEmail = async (values) => {
 
                 div {
                     min-width: 350px;
+
                     @media screen and (max-width: 900px) {
                         min-width: 100%;
                     }
