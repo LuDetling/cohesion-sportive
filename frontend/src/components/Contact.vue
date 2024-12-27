@@ -7,24 +7,24 @@
                     <div>
                         <div class="lastname">
                             <label for="lastname">Nom</label>
-                            <Field name="lastname" type="text" />
+                            <Field name="lastname" type="text" id="lastname" />
                             <ErrorMessage name="lastname" />
                         </div>
                         <div class="firstname">
                             <label for="firstname">Prénom</label>
-                            <Field name="firstname" type="text" />
+                            <Field name="firstname" type="text" id="firstname" />
                             <ErrorMessage name="firstname" />
                         </div>
                     </div>
                     <div>
                         <div class="email">
                             <label for="email">Email</label>
-                            <Field name="email" type="text" />
+                            <Field name="email" type="text" id="email" />
                             <ErrorMessage name="email" />
                         </div>
                         <div class="phone">
                             <label for="phone">Téléphone</label>
-                            <Field name="phone" type="text" />
+                            <Field name="phone" type="text" id="phone" />
                             <ErrorMessage name="phone" />
                         </div>
                     </div>
@@ -79,9 +79,17 @@ const sendEmail = async (values) => {
 </script>
 <style lang="scss" scoped>
 #contact {
-    background-image: url("@/assets/images/contactbis.jpg");
+    background-image: url("@/assets/images/contact.webp");
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 929px) {
+        background-attachment: scroll;
+    }
 
     .container {
         max-width: 1400px;
@@ -102,7 +110,7 @@ const sendEmail = async (values) => {
         }
 
         h2 {
-            color: #C17C45;
+            color: #ad550f;
             margin-bottom: 4rem;
         }
 

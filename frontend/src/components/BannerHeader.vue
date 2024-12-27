@@ -1,7 +1,7 @@
 <template>
     <div class="banner-header">
         <div class="on-img">
-            <img src="@/assets/images/logo-grey.webp" alt="Logo cohésion sportive" class="logo-header">
+            <img src="@/assets/images/logo-grey.webp" alt="Logo cohésion sportive" class="logo-header" width="300">
             <div class="right-content">
                 <h1>Chloé Douguedroit</h1>
                 <div class="text">Coach sportive diplômée</div>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <a href="#description" class="scroll-down">
-            <img src="../assets/images/background/scroll-down.gif" alt="scroll down">
+            <img src="../assets/images/scroll-down.gif" alt="scroll down" width="50">
         </a>
     </div>
 </template>
@@ -23,17 +23,25 @@
 .banner-header {
     position: relative;
     background-image: url("@/assets/images/header.webp");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding: 300px 0 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    max-height: 100vh;
 
     @media screen and (max-width: 929px) {
-        padding: 150px 0 100px;
-        
+        padding: 100px 0 100px;
+        width: 100%;
+        height: 100%;
+        background-attachment: scroll;
     }
 
     &::before {
@@ -72,6 +80,12 @@
             width: 30%;
             padding-right: 1rem;
             min-width: 250px;
+
+            @media screen and (max-width: 929px) {
+                width: 200px;
+                padding-right: 0;
+                min-width: 100px;
+            }
         }
 
 
@@ -102,7 +116,7 @@
             }
 
             .text {
-                color: #C17C45;
+                color: #ad550f;
                 font-size: 28px;
             }
 

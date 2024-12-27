@@ -188,7 +188,7 @@ section {
     tbody {
         td {
             background-color: #ffffff;
-            color: #C17C45;
+            color: #ad550f;
             font-size: 15px;
         }
     }

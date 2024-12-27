@@ -55,7 +55,8 @@ window.addEventListener('scroll', checkActiveSection);
             <p>Pourquoi moi ?</p>
           </a>
         </div>
-        <a href="#" class="logo-menu"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"></a>
+        <a href="#" class="logo-menu"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"
+            width="100" height="100"></a>
         <div class="nav-content">
           <a href="#services" :class="{ 'active': activeSection === 'services' }">
             <p>Services & tarifs</p>
@@ -68,8 +69,9 @@ window.addEventListener('scroll', checkActiveSection);
         </div>
       </nav>
       <div class="nav-burger">
-        <a href="#" class="logo-menu"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"></a>
-        <button class="burger-menu" @click="toggleMenu">
+        <a href="#" class="logo-menu"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"
+            width="100" height="100"></a>
+        <button class="burger-menu" @click="toggleMenu" aria-label="burger menu">
           <div class="burger burger-top"></div>
           <div class="burger burger-bot"></div>
         </button>
@@ -106,7 +108,6 @@ window.addEventListener('scroll', checkActiveSection);
   position: fixed;
   right: 0;
   top: 119px;
-  // height: calc(100vh - 119px);
   background-color: #f8f6f6;
   z-index: 12000;
   padding: 2rem;
@@ -145,11 +146,11 @@ window.addEventListener('scroll', checkActiveSection);
       text-decoration: none;
 
       &.active {
-        color: #C17C45;
+        color: #ad550f;
       }
 
       &:hover {
-        color: #C17C45;
+        color: #ad550f;
       }
     }
   }
@@ -178,7 +179,7 @@ window.addEventListener('scroll', checkActiveSection);
     .burger {
       width: 30px;
       height: 3px;
-      background-color: #C17C45;
+      background-color: #ad550f;
       transition: .3s;
       border-radius: 8px;
       left: 0;
@@ -236,13 +237,13 @@ img {
     position: relative;
 
     &.active {
-      color: #C17C45;
+      color: #ad550f;
     }
 
     &:not(.logo-menu) {
 
       p {
-        transition: transform .5s, opacity .3s;
+        transition: transform .5s, opacity .3s, color .3s;
       }
 
       p:first-child {
@@ -260,11 +261,13 @@ img {
         p:first-child {
           transform: translateY(0);
           opacity: 1;
+          color: #ad550f;
         }
 
         p:last-child {
           transform: translateY(30px);
           opacity: 0;
+          color: #ad550f;
         }
       }
     }

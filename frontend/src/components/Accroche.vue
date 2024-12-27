@@ -32,7 +32,7 @@
     }
 
     h2 {
-        color: #C17C45;
+        color: #ad550f;
         width: 30%;
         padding: .5rem 2rem .5rem 0;
         text-align: right;

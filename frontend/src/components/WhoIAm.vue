@@ -20,7 +20,7 @@
             </div>
             <div class="right-content">
                 <h2>Qui suis-je ?</h2>
-                <img src="@/assets/images/moi.png" alt="Photo de moi">
+                <img src="@/assets/images/moi.webp" alt="Photo de moi" width="300">
             </div>
         </div>
     </section>
@@ -74,7 +74,7 @@ section {
             }
 
             h2 {
-                color: #C17C45;
+                color: #ad550f;
                 padding: .5rem 0 .5rem 2rem;
                 text-transform: uppercase;
                 font-size: 1.5rem;

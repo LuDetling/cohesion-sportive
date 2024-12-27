@@ -64,7 +64,7 @@
 #whyme {
     h2 {
         text-align: center;
-        color: #C17C45;
+        color: #ad550f;
         margin-bottom: 4rem;
     }
 

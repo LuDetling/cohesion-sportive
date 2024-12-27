@@ -1,12 +1,15 @@
 @import './reset.css';
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("../assets/fonts/Comfortaa-VariableFont_wght.ttf");
+}
 
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Comfortaa', 'Work Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
   color: #05152e;
   background-color: #f8f6f6;
   overflow-x: hidden;
@@ -16,12 +19,13 @@
   scroll-behavior: smooth;
   scroll-padding: 100px;
   box-sizing: border-box;
-  font-family: 'Comfortaa', 'Work Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
 }
 
 section {
   padding: 125px 50px;
 }
+
 @media screen and (max-width: 768px) {
   section {
     padding: 75px 20px;
@@ -59,12 +63,12 @@ h4 {
 }
 
 .btn-border:hover {
-  border-color: #C17C45;
+  border-color: #ad550f;
 }
 
 .btn-border-brown {
-  border: 1px solid #C17C45;
-  color: #C17C45;
+  border: 1px solid #ad550f;
+  color: #ad550f;
   border-radius: 50px;
   width: fit-content;
 }

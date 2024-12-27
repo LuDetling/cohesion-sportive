@@ -271,7 +271,7 @@ section {
     margin: auto;
 
     h2 {
-        color: #C17C45;
+        color: #ad550f;
         text-align: center;
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -302,11 +302,17 @@ section {
             margin-bottom: 3rem;
             background-attachment: fixed;
             background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             background-size: cover;
             position: relative;
             border-radius: 16px;
             overflow: hidden;
 
+            @media screen and (max-width: 929px) {
+                background-attachment: scroll;
+            }
 
             @media screen and (max-width: 600px) {
                 padding: 200px 25px;
@@ -316,7 +322,7 @@ section {
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-color: rgba($color: #000000, $alpha: .5);
+                background-color: rgba($color: #000000, $alpha: .7);
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -420,14 +426,12 @@ section {
         }
 
         .left-content-background {
-            background-image: url('@/assets/images/left-content.jpg');
+            background-image: url('@/assets/images/left-content.webp');
             color: white;
-
-
         }
 
         .right-content-background {
-            background-image: url('@/assets/images/groupe.jpg');
+            background-image: url('@/assets/images/groupe.webp');
             color: white;
             background-position: right;
         }
@@ -497,7 +501,7 @@ thead {
 tbody {
     td {
         background-color: #ffffff;
-        color: #C17C45;
+        color: #ad550f;
         font-size: 15px;
     }
 }
