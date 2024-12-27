@@ -6,7 +6,7 @@
                 <div class="left-content-background">
                     <div class="content">
                         <h3>Coaching à domicile</h3>
-                        <a href="#reserver" class="btn btn-border">Réserver</a>
+                        <a href="#contact" class="btn btn-border">Réserver</a>
                         <div class="arrow">↓</div>
                         <div class="accordion">
                             <button @click="(isExpandedLeftTop = !isExpandedLeftTop) && (isExpandedLeftBottom = false)"
@@ -153,7 +153,7 @@
                 <div class="right-content-background">
                     <div class="content">
                         <h3>Coaching en ligne</h3>
-                        <a href="#reserver" class="btn btn-border">Réserver</a>
+                        <a href="#contact" class="btn btn-border">Réserver</a>
                         <div class="arrow">↓</div>
                         <div class="accordion">
                             <button

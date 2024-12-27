@@ -47,7 +47,7 @@ import { Field, Form, ErrorMessage } from 'vee-validate';
 import { ref } from 'vue';
 import * as yup from 'yup';
 
-let url = "http://localhost:8000/api/contact"
+let url = "https://cohesion-sportive.fr/api/contact"
 
 const valideForm = ref('');
 const errorForm = ref('');

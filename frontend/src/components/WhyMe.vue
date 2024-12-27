@@ -43,7 +43,7 @@
                 </ul>
             </div>
             <div>
-                <h3>Gain de temps etd'efficacité</h3>
+                <h3>Gain de temps et d'efficacité</h3>
                 <ul>
                     <li>J'optimise les séances, chaque minute est utilisée efficacement.</li>
                     <li>Structure claire : Pas besoin de planifier ou de chercher des exercices, tout est préparé pour

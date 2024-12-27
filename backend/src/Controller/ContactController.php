@@ -45,4 +45,10 @@ class ContactController extends AbstractController
 
         return new JsonResponse("Votre message a été envoyé", 200);
     }
+
+    #[Route('/api/test', name: 'api_test', methods: ['GET'])]
+    public function test(): JsonResponse
+    {
+        return new JsonResponse("test", 200);
+    }
 }

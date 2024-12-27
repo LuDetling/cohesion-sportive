@@ -13,14 +13,14 @@
         <div>
             <h2>Me retrouver</h2>
             <div class="social">
-                <a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
-                <a href="https://www.linkedin.com/in/chloe-douguedroit-649896331/">
+                <!-- <a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a> -->
+                <a href="https://www.linkedin.com/in/chloe-douguedroit-649896331/" target="_blank">
                     <font-awesome-icon :icon="['fab', 'linkedin-in']" />
                 </a>
                 <a href="https://www.instagram.com/cohesion.sportive/" target="_blank">
                     <font-awesome-icon :icon="['fab', 'instagram']" />
                 </a>
-                <a href="#"><font-awesome-icon :icon="['fab', 'whatsapp']" /></a>
+                <!-- <a href="#"><font-awesome-icon :icon="['fab', 'whatsapp']" /></a> -->
             </div>
         </div>
     </footer>
