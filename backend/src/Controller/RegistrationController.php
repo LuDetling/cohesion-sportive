@@ -30,40 +30,36 @@ class RegistrationController extends AbstractController
     #[Route('/api/register', name: 'api_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, Security $security, EntityManagerInterface $entityManager): JsonResponse
     {
-        $user = $this->serializer->deserialize($request->getContent(), User::class, 'json');
-        $user->setPassword($userPasswordHasher->hashPassword($user, $user->getPassword()))
-            ->setRoles(['ROLE_USER']);
-        $entityManager->persist($user);
-        $entityManager->flush();
-        // $data = json_decode($request->getContent(), true);
-        // $user = new User();
-        // $form = $this->createForm(RegistrationFormType::class, $user);
-        // $form->submit($data);
-        // dump($form->getErrors(true, false));
+        $data = json_decode($request->getContent(), true);
+        $user = new User();
+        $data['password'] = $userPasswordHasher->hashPassword($user, $data['plainPassword']);
+        unset($data['plainPassword']);
 
-        // if ($form->isSubmitted() && $form->isValid()) {
-        //     /** @var string $plainPassword */
-        //     $plainPassword = $form->get('plainPassword')->getData();
+        $form = $this->createForm(RegistrationFormType::class, $user);
+        $form->submit($data);
 
-        //     // encode the plain password
-        //     $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword));
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var string $plainPassword */
+            $plainPassword = $form->get('plainPassword')->getData();
 
-        //     $entityManager->persist($user);
-        //     $entityManager->flush();
+            // encode the plain password
+            $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword));
 
-        //     // generate a signed url and email it to the user
-        $this->emailVerifier->sendEmailConfirmation(
-            'api_verify_email',
-            $user,
-            (new TemplatedEmail())
-                ->from(new Address('chloe-douguedroit@cohesion-sportive.fr', 'cohesion-sportive'))
-                ->to((string) $user->getEmail())
-                ->subject('Please Confirm your Email')
-                ->htmlTemplate('registration/confirmation_email.html.twig')
-        );
+            $entityManager->persist($user);
+            $entityManager->flush();
 
-        //     // do anything else you need here, like send an email
-        // }
+            // generate a signed url and email it to the user
+            $this->emailVerifier->sendEmailConfirmation(
+                'api_verify_email',
+                $user,
+                (new TemplatedEmail())
+                    ->from(new Address('chloe-douguedroit@cohesion-sportive.fr', 'cohesion-sportive'))
+                    ->to((string) $user->getEmail())
+                    ->subject('Please Confirm your Email')
+                    ->htmlTemplate('registration/confirmation_email.html.twig')
+            );
+            // do anything else you need here, like send an email
+        }
 
         return new JsonResponse([
             $user
@@ -80,7 +76,7 @@ class RegistrationController extends AbstractController
         if (null === $id) {
             return new JsonResponse(['message' => 'Id not found'], Response::HTTP_NOT_FOUND);
         }
-        
+
         $user = $userRepository->find($id);
         dump($user);
 
