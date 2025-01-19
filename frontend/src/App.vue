@@ -39,6 +39,11 @@ const checkActiveSection = () => {
 }
 
 window.addEventListener('scroll', checkActiveSection);
+
+const date = new Date();
+console.log(date);
+
+
 </script>
 
 <template>

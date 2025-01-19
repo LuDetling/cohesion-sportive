@@ -1,10 +1,16 @@
 <?php
 
+// Gerer les indisponibilité
+// greater than
+// expression
+
 namespace App\Entity;
 
 use App\Repository\CreneauRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CreneauRepository::class)]
 class Creneau
@@ -15,12 +21,20 @@ class Creneau
     private ?int $id = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date = null;
+    #[Assert\NotBlank]
+    #[Assert\GreaterThan("+72 hours")]
+    #[Groups('user')]
+    private ?\DateTimeInterface $dateStart = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $dateFin = null;
+    #[Assert\NotBlank]
+    #[Assert\GreaterThan(propertyPath: 'dateStart')]
+    #[Groups('user')]
+    private ?\DateTimeInterface $dateEnd = null;
 
     #[ORM\ManyToOne(inversedBy: 'creneaux')]
+    #[Assert\NotBlank]
+    #[Groups('user')]
     private ?User $userId = null;
 
     public function getId(): ?int
@@ -28,27 +42,26 @@ class Creneau
         return $this->id;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDateStart(): ?\DateTimeInterface
     {
-        return $this->date;
+        return $this->dateStart;
     }
 
-    public function setDate(\DateTimeInterface $date): static
+    public function setDateStart(\DateTimeInterface $dateStart): static
     {
-        $this->date = $date;
+        $this->dateStart = $dateStart;
 
         return $this;
     }
 
-    public function getDateFin(): ?\DateTimeInterface
+    public function getDateEnd(): ?\DateTimeInterface
     {
-        return $this->dateFin;
+        return $this->dateEnd;
     }
 
-    public function setDateFin(\DateTimeInterface $dateFin): static
+    public function setDateEnd(\DateTimeInterface $dateEnd): static
     {
-        $this->dateFin = $dateFin;
-
+        $this->dateEnd = $dateEnd;
         return $this;
     }
 
