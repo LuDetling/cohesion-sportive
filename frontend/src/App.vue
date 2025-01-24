@@ -43,6 +43,8 @@ window.addEventListener('scroll', checkActiveSection);
 const date = new Date();
 console.log(date);
 
+// a changer en verifiant le token
+const isConnected = ref(true);
 
 </script>
 
@@ -67,10 +69,18 @@ console.log(date);
             <p>Services & tarifs</p>
             <p>Services & tarifs</p>
           </a>
-          <a href="#contact" :class="{ 'active': activeSection === 'contact' }">
+          <!-- <a href="#contact" :class="{ 'active': activeSection === 'contact' }">
             <p>Contact</p>
             <p>Contact</p>
-          </a>
+          </a> -->
+          <RouterLink to="/#contact" :class="{ 'active': activeSection === 'contact' }">
+            <p>Contact</p>
+            <p>Contact</p>
+          </RouterLink>
+          <RouterLink to="/calendar" v-if="isConnected">
+            <p>RDV</p>
+            <p>RDV</p>
+          </RouterLink>
         </div>
       </nav>
       <div class="nav-burger">
