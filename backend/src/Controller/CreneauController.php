@@ -30,6 +30,8 @@ class CreneauController extends AbstractController
         
         return new JsonResponse($creneaux, 200);
     }
+
+    
     #[Route('/api/creneau/new', name: 'api_new_creneau', methods: ['POST'])]
     #[IsGranted('ROLE_USER', message: 'Access denied!')]
     public function newCreneau(Request $request, EntityManagerInterface $em): JsonResponse

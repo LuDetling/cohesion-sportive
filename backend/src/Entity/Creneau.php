@@ -26,16 +26,15 @@ class Creneau
     #[Groups('user')]
     private ?\DateTimeInterface $dateStart = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    #[Assert\NotBlank]
-    #[Assert\GreaterThan(propertyPath: 'dateStart')]
-    #[Groups('user')]
-    private ?\DateTimeInterface $dateEnd = null;
-
     #[ORM\ManyToOne(inversedBy: 'creneaux')]
     #[Assert\NotBlank]
     #[Groups('user')]
     private ?User $userId = null;
+
+    #[ORM\Column]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 1, max: 2, exactMessage: "La durée doit être de 30 minutes ou 1 heure")]
+    private ?int $duration = null;
 
     public function getId(): ?int
     {
@@ -54,16 +53,7 @@ class Creneau
         return $this;
     }
 
-    public function getDateEnd(): ?\DateTimeInterface
-    {
-        return $this->dateEnd;
-    }
 
-    public function setDateEnd(\DateTimeInterface $dateEnd): static
-    {
-        $this->dateEnd = $dateEnd;
-        return $this;
-    }
 
     public function getUserId(): ?User
     {
@@ -73,6 +63,18 @@ class Creneau
     public function setUserId(?User $userId): static
     {
         $this->userId = $userId;
+
+        return $this;
+    }
+
+    public function getDuration(): ?int
+    {
+        return $this->duration;
+    }
+
+    public function setDuration(int $duration): static
+    {
+        $this->duration = $duration;
 
         return $this;
     }
