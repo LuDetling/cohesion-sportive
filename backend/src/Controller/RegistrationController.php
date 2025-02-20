@@ -50,12 +50,18 @@ class RegistrationController extends AbstractController
             //         ->subject('Please Confirm your Email')
             //         ->htmlTemplate('registration/confirmation_email.html.twig')
             // );
-            return new JsonResponse(['message' => 'User registered!'], 201);
+            return new JsonResponse([
+                'message' => 'User registered!',
+                'code' => 1
+            ], 201);
 
             // do anything else you need here, like send an email
         }
 
-        return new JsonResponse(['message' => 'User not registered!'], 400);
+        return new JsonResponse([
+            'message' => 'User not registered!',
+            'code' => 2
+        ], 400);
     }
 
     #[Route('/api/verify/email', name: 'api_verify_email')]

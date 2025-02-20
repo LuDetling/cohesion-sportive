@@ -40,9 +40,6 @@ const checkActiveSection = () => {
 
 window.addEventListener('scroll', checkActiveSection);
 
-const date = new Date();
-console.log(date);
-
 // a changer en verifiant le token
 const isConnected = ref(true);
 
@@ -82,6 +79,15 @@ const isConnected = ref(true);
             <p>RDV</p>
           </RouterLink>
         </div>
+        <RouterLink to="/register" v-if="isConnected">
+          <p>Inscription</p>
+          <p>Inscription</p>
+        </RouterLink>
+        <RouterLink to="/login" v-if="isConnected">
+          <p>Connexion</p>
+          <p>Connexion</p>
+        </RouterLink>
+
       </nav>
       <div class="nav-burger">
         <a href="#" class="logo-menu"><img src="@/assets/images/cohésion+sportive+(1)-1920w.webp" alt="Logo menu"
@@ -97,6 +103,9 @@ const isConnected = ref(true);
           <a href="#whyme" :class="{ 'active': activeSection === 'whyme' }">Pourquoi moi ?</a>
           <a href="#services" :class="{ 'active': activeSection === 'services' }">Services & tarifs</a>
           <a href="#contact" :class="{ 'active': activeSection === 'contact' }">Contact</a>
+          <RouterLink to="/calendar" v-if="isConnected">
+            <p>RDV</p>
+          </RouterLink>
         </div>
       </nav>
     </div>

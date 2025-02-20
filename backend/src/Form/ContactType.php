@@ -16,10 +16,10 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, )
-            ->add('message', TextareaType::class)
-            ->add('firstname', TextType::class)
-            ->add('lastname', TextType::class)
-            ->add('phone', TextType::class);
+            ->add('message')
+            ->add('firstname')
+            ->add('lastname')
+            ->add('phone');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
