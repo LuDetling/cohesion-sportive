@@ -41,7 +41,7 @@ const checkActiveSection = () => {
 window.addEventListener('scroll', checkActiveSection);
 
 // a changer en verifiant le token
-const isConnected = ref(true);
+const isConnected = ref(false);
 
 </script>
 
@@ -66,14 +66,14 @@ const isConnected = ref(true);
             <p>Services & tarifs</p>
             <p>Services & tarifs</p>
           </a>
-          <!-- <a href="#contact" :class="{ 'active': activeSection === 'contact' }">
+          <a href="#contact" :class="{ 'active': activeSection === 'contact' }">
             <p>Contact</p>
             <p>Contact</p>
-          </a> -->
-          <RouterLink to="/#contact" :class="{ 'active': activeSection === 'contact' }">
+          </a>
+          <!-- <RouterLink to="/#contact" :class="{ 'active': activeSection === 'contact' }">
             <p>Contact</p>
             <p>Contact</p>
-          </RouterLink>
+          </RouterLink> -->
           <RouterLink to="/calendar" v-if="isConnected">
             <p>RDV</p>
             <p>RDV</p>
@@ -112,10 +112,36 @@ const isConnected = ref(true);
   </header>
 
   <RouterView />
+  <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+    class="calendly" target="_blank">
+    <font-awesome-icon :icon="['fas', 'calendar-days']" />
+  </a>
+
   <Footer />
 </template>
 
 <style scoped lang="scss">
+.calendly {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  font-size: 2rem;
+  background-color: #ad550f;
+  color: #f8f6f6;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  box-shadow: 3px 3px 8px 0 rgba($color: #000000, $alpha: .7);
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
 .wrapper {
   position: fixed;
   width: 100%;

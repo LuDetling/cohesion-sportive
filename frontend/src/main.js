@@ -11,9 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faFacebookF, faLinkedinIn, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faCalendar, faCalendarDays, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add({ faFacebookF, faLinkedinIn, faInstagram, faWhatsapp })
+library.add({ faFacebookF, faLinkedinIn, faInstagram, faWhatsapp, faCalendar, faCalendarDays })
 
 import App from './App.vue'
 import router from './router'

@@ -20,7 +20,7 @@
             </div>
             <div class="right-content">
                 <h2>Qui suis-je ?</h2>
-                <img src="@/assets/images/moi.webp" alt="Photo de moi" width="300">
+                <img src="@/assets/images/chlo.jpg" alt="Photo de moi" width="300">
             </div>
         </div>
     </section>

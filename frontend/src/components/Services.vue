@@ -6,7 +6,8 @@
                 <div class="left-content-background">
                     <div class="content">
                         <h3>Coaching à domicile</h3>
-                        <a href="#contact" class="btn btn-border">Réserver</a>
+                        <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+                            class="btn btn-border" target="_blank">Réserver un coaching</a>
                         <div class="arrow">↓</div>
                         <div class="accordion">
                             <button @click="(isExpandedLeftTop = !isExpandedLeftTop) && (isExpandedLeftBottom = false)"
@@ -64,19 +65,15 @@
                                         domicile est tout à fait adapté. Loin du regard des autres, vous restez
                                         concentré
                                         sur votre séance et vos sensations. La progression est assurée.</li>
-                                    <li>La possibilité d’être coaché avec un membre de sa famille, un ami, met l’accent
-                                        sur
-                                        la convivialité et la cohésion de groupe. Cela permet de renforcer les liens
-                                        tout en
-                                        restant actif.
-                                    </li>
                                 </ul>
                             </Collapse>
                         </div>
                     </div>
                 </div>
                 <div class="tarifs">
-                    <div class="left-tarifs-content">
+
+                    <div class="left-tarifs">
+                        <!-- <div class="left-tarifs-content"> -->
                         <h3>Solo</h3>
                         <table>
                             <thead>
@@ -88,7 +85,7 @@
                             <tbody>
                                 <tr>
                                     <td>Séance Individuelle</td>
-                                    <td>40 euros HT</td>
+                                    <td>50 euros HT</td>
                                 </tr>
                                 <tr>
                                     <td>Pack 5 séances</td>
@@ -104,56 +101,45 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="text">
-                            <p>Programme + 15 euros HT</p>
-                            <p>Facilités de paiement (paiement en 3 fois)</p>
+                        <!-- <div class="text">
                             <p>Chaque séance sera limitée à 1 heure maximum.</p>
                         </div>
-                        <a href="#contact" class="btn btn-border-brown">Demander un devis</a>
+                        <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+                            class="btn btn-border-brown" target="_blank">Réserver un coaching</a> -->
+                        <!-- </div> -->
                     </div>
-                    <div class="right-tarifs-content">
-                        <h3>Duo</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Packs</th>
-                                    <th>Tarifs/pers.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Séance Individuelle</td>
-                                    <td>25 euros HT</td>
-                                </tr>
-                                <tr>
-                                    <td>Pack 5 séances</td>
-                                    <td>112,5 euros HT</td>
-                                </tr>
-                                <tr>
-                                    <td>Pack 10 séances</td>
-                                    <td>212,5 euros HT</td>
-                                </tr>
-                                <tr>
-                                    <td>Pack 20 séances</td>
-                                    <td>375 euros HT</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="text">
-                            <p>Programme + 15 euros HT</p>
-                            <p>Facilités de paiement (paiement en 3 fois)</p>
-                            <p>Chaque séance sera limitée à 1 heure maximum.</p>
-                        </div>
-                        <a href="#contact" class="btn btn-border-brown">Demander un devis</a>
-                    </div>
-                </div>
-            </div>
-            <div class="right-content">
+                    <div class="right-tarifs">
 
+                        <!-- <div class="right-tarifs-content"> -->
+                        <h3>Parrainage</h3>
+                        <ul>
+                            <li>1 séance offerte pour le parrain*</li>
+                            <li>1 séance offerte pour le parrainé (première séance)*</li>
+                        </ul>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="text">
+                    <p>Chaque séance sera limitée à 1 heure maximum.</p>
+                    <p>* Le parrain doit avoir effectué un minimum de 5 séances avant de pouvoir proposer une
+                        perssone
+                    </p>
+                    <p>* Limité à un parrainages par personne par an</p>
+
+                </div>
+                <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+                    class="btn btn-border-brown" target="_blank">Réserver un coaching</a>
+            </div>
+
+
+
+            <!-- RIGHT CONTENT -->
+            <div class="right-content">
                 <div class="right-content-background">
                     <div class="content">
                         <h3>Coaching en ligne</h3>
-                        <a href="#contact" class="btn btn-border">Réserver</a>
+                        <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+                            class="btn btn-border" target="_blank">Réserver un coaching</a>
                         <div class="arrow">↓</div>
                         <div class="accordion">
                             <button
@@ -169,10 +155,7 @@
                                 <ul>
                                     <li>Appel de début de programme : Un premier échange pour comprendre vos objectifs,
                                         votre mode de vie et définir le plan qui vous convient.</li>
-                                    <li>Suivi régulier : Des suivis hebdomadaires ou bimensuels pour ajuster le
-                                        programme en
-                                        fonction de vos progrès, corriger vos exécutions et répondre à toutes vos
-                                        questions.
+                                    <li>Suivi régulier : Des suivis, hebdomadaires, bimensuels ou mensuels.
                                     </li>
                                     <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement, la
                                         récupération, la mobilité...
@@ -222,7 +205,7 @@
                 <div class="tarifs">
                     <div>
                         <h3>Abonnement</h3>
-                        <table>
+                        <!-- <table>
                             <thead>
                                 <tr>
                                     <th>Engagement</th>
@@ -243,12 +226,13 @@
                                     <td>1200 euros HT (Soit 100 euros/mois)</td>
                                 </tr>
                             </tbody>
-                        </table>
-                        <div class="text">
+                        </table> -->
+                        <!-- <div class="text">
                             <p>Programme inclut.</p>
                             <p>Facilités de paiement (paiement en 3, 6 ou 12 fois).</p>
-                        </div>
-                        <a href="#contact" class="btn btn-border-brown">Demander un devis</a>
+                        </div> -->
+                        <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+                            class="btn btn-border-brown" target="_blank">Réserver un coaching</a>
                     </div>
                 </div>
             </div>
@@ -426,12 +410,12 @@ section {
         }
 
         .left-content-background {
-            background-image: url('@/assets/images/left-content.webp');
+            background-image: url('@/assets/images/Design_sans_titre.jpg');
             color: white;
         }
 
         .right-content-background {
-            background-image: url('@/assets/images/groupe.webp');
+            background-image: url('@/assets/images/Design_sans_titre_2.jpg');
             color: white;
             background-position: right;
         }
@@ -440,27 +424,35 @@ section {
 
 .left-tarifs,
 .right-tarifs {
-    width: calc(50% - 2rem);
+    width: calc(50% - 1rem);
 
     .left-tarifs-content,
     .right-tarifs-content {
-        width: calc(50% - 1rem);
+        width: 100%;
         min-width: 310px;
     }
 }
 
 .right-tarifs {
-    .tarifs {
-        height: 100%;
+    height: 100%;
 
-        >div {
-            display: flex;
-            flex-direction: column;
+    >div {
+        display: flex;
+        flex-direction: column;
 
-            .text {
-                margin-top: auto;
+        .text {
+            margin-top: auto;
 
-            }
+        }
+    }
+    ul {
+        list-style: disc;
+        padding-left: 40px;
+
+        li {
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            font-size: 15px;
         }
     }
 }
