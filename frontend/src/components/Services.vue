@@ -7,7 +7,7 @@
                     <div class="content">
                         <h3>Coaching à domicile</h3>
                         <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
-                            class="btn btn-border" target="_blank">Réserver un coaching</a>
+                            class="btn btn-border" target="_blank">Réserver mon coaching</a>
                         <div class="arrow">↓</div>
                         <div class="accordion">
                             <button @click="(isExpandedLeftTop = !isExpandedLeftTop) && (isExpandedLeftBottom = false)"
@@ -70,65 +70,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="tarifs">
 
-                    <div class="left-tarifs">
-                        <!-- <div class="left-tarifs-content"> -->
-                        <h3>Solo</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Packs</th>
-                                    <th>Tarifs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Séance Individuelle</td>
-                                    <td>50 euros HT</td>
-                                </tr>
-                                <tr>
-                                    <td>Pack 5 séances</td>
-                                    <td>180 euros HT</td>
-                                </tr>
-                                <tr>
-                                    <td>Pack 10 séances</td>
-                                    <td>340 euros HT</td>
-                                </tr>
-                                <tr>
-                                    <td>Pack 20 séances</td>
-                                    <td>600 euros HT</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- <div class="text">
-                            <p>Chaque séance sera limitée à 1 heure maximum.</p>
-                        </div>
-                        <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
-                            class="btn btn-border-brown" target="_blank">Réserver un coaching</a> -->
-                        <!-- </div> -->
-                    </div>
-                    <div class="right-tarifs">
 
-                        <!-- <div class="right-tarifs-content"> -->
-                        <h3>Parrainage</h3>
-                        <ul>
-                            <li>1 séance offerte pour le parrain*</li>
-                            <li>1 séance offerte pour le parrainé (première séance)*</li>
-                        </ul>
-                    </div>
+                <div class="offre">
+                    <h3>Coaching individuel</h3>
+                    <div class="offre-seance">50€ HT/séance</div>
+                    <p class="text-seance">Chaque séance sera limitée à 1 heure maximum</p>
+                    <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
+                        class="btn btn-border-brown" target="_blank">Réserver mon coaching</a>
+                    <h4>Parainnage</h4>
+                    <ul>
+                        <li>1 séance offerte pour le parrain*</li>
+                        <li>Première séance offerte pour le parrainé*</li>
+                    </ul>
                     <!-- </div> -->
+                    <div class="text">
+                        <p>*Un minimum de 5 séances effectuées est requis pour accéder au parrainage.
+                        </p>
+                        <p>*Limité à 5 parrainages par personne par an.</p>
+                    </div>
                 </div>
-                <div class="text">
-                    <p>Chaque séance sera limitée à 1 heure maximum.</p>
-                    <p>* Le parrain doit avoir effectué un minimum de 5 séances avant de pouvoir proposer une
-                        perssone
-                    </p>
-                    <p>* Limité à un parrainages par personne par an</p>
 
-                </div>
-                <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
-                    class="btn btn-border-brown" target="_blank">Réserver un coaching</a>
             </div>
 
 
@@ -139,7 +101,7 @@
                     <div class="content">
                         <h3>Coaching en ligne</h3>
                         <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
-                            class="btn btn-border" target="_blank">Réserver un coaching</a>
+                            class="btn btn-border" target="_blank">Réserver mon coaching</a>
                         <div class="arrow">↓</div>
                         <div class="accordion">
                             <button
@@ -204,7 +166,7 @@
                 </div>
                 <div class="tarifs">
                     <div>
-                        <h3>Abonnement</h3>
+                        <h3>Contrat</h3>
                         <!-- <table>
                             <thead>
                                 <tr>
@@ -232,7 +194,7 @@
                             <p>Facilités de paiement (paiement en 3, 6 ou 12 fois).</p>
                         </div> -->
                         <a href="https://calendly.com/cohesion-sportive?fbclid=PAZXh0bgNhZW0CMTEAAaY1qIkGeGkejxCNc4zarEAEc2WKgzyMPwdZeyv_wFwJwiVMNjR6EH6DDvs_aem_Xwn90fz4-IUumvj-oIFGHA"
-                            class="btn btn-border-brown" target="_blank">Réserver un coaching</a>
+                            class="btn btn-border-brown" target="_blank">Réserver mon coaching</a>
                     </div>
                 </div>
             </div>
@@ -249,6 +211,51 @@ const isExpandedRightTop = ref(false)
 const isExpandedRightBottom = ref(false)
 </script>
 <style lang="scss" scoped>
+.offre {
+    h3 {
+        margin-bottom: .5rem;
+    }
+
+    .offre-seance {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: auto;
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+    .text-seance {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+    }
+
+    a {
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: disc;
+        padding: 0 20px;
+
+        li {
+            padding-left: .5rem;
+            margin-bottom: 1rem;
+
+            &::marker {
+                content: "➞";
+            }
+        }
+    }
+}
+
+
 section {
     max-width: 1500px;
     width: 100%;
@@ -445,6 +452,7 @@ section {
 
         }
     }
+
     ul {
         list-style: disc;
         padding-left: 40px;
@@ -500,7 +508,6 @@ tbody {
 
 .text {
     margin: 2rem 0;
-    text-align: center;
     font-size: 12px;
     line-height: 1.5;
 }
