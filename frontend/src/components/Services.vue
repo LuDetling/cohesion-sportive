@@ -417,12 +417,12 @@ section {
         }
 
         .left-content-background {
-            background-image: url('@/assets/images/Design_sans_titre.jpg');
+            background-image: url('@/assets/images/Collapse-1.jpg');
             color: white;
         }
 
         .right-content-background {
-            background-image: url('@/assets/images/Design_sans_titre_2.jpg');
+            background-image: url('@/assets/images/Collapse-2.jpg');
             color: white;
             background-position: right;
         }
