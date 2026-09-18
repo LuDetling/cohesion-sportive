@@ -3,7 +3,7 @@
         <div class="container">
             <div class="on-background">
                 <h2>Me contacter</h2>
-                <Form @submit="sendEmail" :validation-schema="contactSchema">
+                <Form @submit="sendEmail" :validation-schema="contactSchema" v-slot="{ handleSubmit, resetForm }">
                     <div>
                         <div class="lastname">
                             <label for="lastname">Nom</label>
@@ -35,22 +35,22 @@
                             <ErrorMessage name="message" />
                         </div>
                     </div>
-                    <button class="btn btn-border-brown">Envoyer</button>
+                    <button class="btn btn-border-brown" :disabled="sending">
+                        {{ sending ? "Envoi en cours..." : "Envoyer" }}
+                    </button>
                 </Form>
-                <p v-if="valideForm || errorForm">{{ valideForm || errorForm }}</p>
+                <!-- <p v-if="valideForm || errorForm">{{ valideForm || errorForm }}</p> -->
+                <p v-if="statusMessage">{{ statusMessage }}</p>
             </div>
         </div>
     </section>
 </template>
 <script setup>
-import { Field, Form, ErrorMessage } from 'vee-validate';
+import { Field, Form, ErrorMessage, useForm } from 'vee-validate';
 import { ref } from 'vue';
 import * as yup from 'yup';
+import emailjs from '@emailjs/browser'
 
-let url = "https://cohesion-sportive.fr/api/contact"
-
-const valideForm = ref('');
-const errorForm = ref('');
 const message = ref('');
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -62,17 +62,39 @@ const contactSchema = yup.object({
     message: yup.string().required("Votre message est requis").min(5, "Votre message doit être de 5 caractères minimum"),
 })
 
-const sendEmail = async (values) => {
+const sending = ref(false)
+const statusMessage = ref('')
+
+const sendEmail = async (values, { resetForm }) => {
+    sending.value = true
     try {
-        const response = await fetch(url, {
-            method: "POST",
-            body: JSON.stringify(values)
-        })
-        const result = await response.json();
-        valideForm.value = "Votre message a bien été envoyé"
-        message.value = ""
+        statusMessage.value = "Envoi en cours..."
+
+        const response = await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            {
+                firstname: values.firstname,
+                lastname: values.lastname,
+                email: values.email,
+                message: values.message,
+                phone: values.phone,
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+
+        statusMessage.value = "Email envoyé avec succès !"
+        console.log('SUCCESS!', response.status, response.text)
+
+        // Réinitialiser le formulaire
+        resetForm()
+
     } catch (error) {
-        errorForm.value = "Il y a eu une erreur"
+        statusMessage.value = "Erreur lors de l'envoi, veuillez réessayer."
+        console.error('FAILED...', error)
+    }
+    finally {
+        sending.value = false
     }
 }
 

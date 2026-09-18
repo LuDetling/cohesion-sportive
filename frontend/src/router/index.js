@@ -14,6 +14,10 @@ const router = createRouter({
         keywords: 'coach sportif, personal trainer, fitness, remise en forme'
       },
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+    }
   ],
 })
 
