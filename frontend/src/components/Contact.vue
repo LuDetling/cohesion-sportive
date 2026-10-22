@@ -79,7 +79,7 @@ const sendEmail = async (values) => {
 </script>
 <style lang="scss" scoped>
 #contact {
-    background-image: url("@/assets/images/Design_sans_titre_1.jpg");
+    background-image: url("@/assets/images/salle-muscu.png");
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

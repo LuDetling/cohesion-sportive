@@ -115,11 +115,13 @@
                             </button>
                             <Collapse :when="isExpandedRightTop">
                                 <ul>
-                                    <li>Appel de début de programme : Un premier échange pour comprendre vos objectifs,
+                                    <li>Appel de début de programme : Un premier échange pour comprendre vos
+                                        objectifs,
                                         votre mode de vie et définir le plan qui vous convient.</li>
                                     <li>Suivi régulier : Des suivis, hebdomadaires, bimensuels ou mensuels.
                                     </li>
-                                    <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement, la
+                                    <li>Disponibilité par mails, SMS, réseaux sociaux : Astuces pour l’échauffement,
+                                        la
                                         récupération, la mobilité...
                                     </li>
                                     <li>Appel de fin de programme : Pour faire le point sur les progrès réalisés et
@@ -140,11 +142,14 @@
                             </button>
                             <Collapse :when="isExpandedRightBottom">
                                 <ul>
-                                    <li>Le coaching en ligne vous permet d’organiser vos séances en fonction de votre
+                                    <li>Le coaching en ligne vous permet d’organiser vos séances en fonction de
+                                        votre
                                         rythme
                                         et de votre emploi du temps.</li>
-                                    <li>De plus, selon vos préférences, vous choisissez le lieu d’entraînement qui vous
-                                        convient (salle de sport, en extérieur ou à domicile). Un programme personnalisé
+                                    <li>De plus, selon vos préférences, vous choisissez le lieu d’entraînement qui
+                                        vous
+                                        convient (salle de sport, en extérieur ou à domicile). Un programme
+                                        personnalisé
                                         est
                                         conçu pour vous, selon vos besoins et vos objectifs.</li>
                                     <li>La communication via les outils numériques permet un suivi régulier de vos
@@ -154,9 +159,11 @@
                                         postures,
                                         vos exécutions.
                                     </li>
-                                    <li>Grâce à mes messages d’encouragements, vous gardez la motivation. Votre coach
+                                    <li>Grâce à mes messages d’encouragements, vous gardez la motivation. Votre
+                                        coach
                                         est là
-                                        pour encourager, remotiver en cas de baisse d'énergie, et célébrer chaque étape
+                                        pour encourager, remotiver en cas de baisse d'énergie, et célébrer chaque
+                                        étape
                                         franchie vers votre objectif.
                                     </li>
                                 </ul>
@@ -291,11 +298,11 @@ section {
             padding: 200px 50px;
             position: relative;
             margin-bottom: 3rem;
-            background-attachment: fixed;
+            // background-attachment: fixed;
             background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+            // -webkit-background-size: cover;
+            // -moz-background-size: cover;
+            // -o-background-size: cover;
             background-size: cover;
             position: relative;
             border-radius: 16px;
@@ -417,12 +424,14 @@ section {
         }
 
         .left-content-background {
-            background-image: url('@/assets/images/Design_sans_titre.jpg');
+            background-image: url('@/assets/images/exo-sol.png');
+            // background-size: cover;
             color: white;
         }
 
         .right-content-background {
-            background-image: url('@/assets/images/Design_sans_titre_2.jpg');
+            background-image: url('@/assets/images/nourriture.png');
+            // background-size: contain;
             color: white;
             background-position: right;
         }
